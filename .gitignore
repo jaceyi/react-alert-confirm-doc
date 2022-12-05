@@ -1,0 +1,14 @@
+# dependencies
+node_modules
+
+# misc
+.DS_Store
+/lib
+dist
+
+# DraftEditor
+/.idea
+/.vscode
+
+
+*.cache
