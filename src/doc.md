@@ -6,7 +6,7 @@ yarn add react-alert-confirm
 npm install react-alert-confirm --save
 ```
 
-## Import
+## Usage
 
 ```typescript
 import 'react-alert-confirm/lib/style.css';
@@ -101,25 +101,21 @@ import AlertConfirm from 'react-alert-confirm';
 AlertConfirm.closeAll();
 ```
 
-## Custom
+### Global config
 
-### Custom config
-
-All Config Types [Imperative API](#imperative-api)
-
-配置可选参数同 [Imperative API](#imperative-api)
-
-#### Example
+The global configuration optional parameters are the same as those of [Imperative API](#imperative-api)
 
 ```typescript jsx
 import AlertConfirm from 'react-alert-confirm';
 
+// update config
 AlertConfirm.config({
   lang: 'zh', // language
   zIndex: 1024
-}); // update config
+});
 
-AlertConfirm.config(); // get config
+// get config
+AlertConfirm.config();
 ```
 
 ## Button
