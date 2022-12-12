@@ -119,6 +119,9 @@ const App = () => {
         </div>
       </div>
       <div className="docs" ref={ref} />
+      <div className="footer">
+        Github：<a href="https://github.com/jaceyi/react-alert-confirm-doc">react-alert-confirm-doc</a>
+      </div>
     </div>
   );
 };

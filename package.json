@@ -5,6 +5,7 @@
     "dev": "vite --port=8080",
     "build": "vite build",
     "preview": "vite preview --port=8080",
+    "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,scss,less,css}'",
     "_link": "yarn link \"react-alert-confirm\"",
     "_uplink": "yarn _unlink && yarn _link",
     "_unlink": "yarn unlink \"react-alert-confirm\" && yarn install --force && rm -rf ./node_modules/.vite/deps"
@@ -17,12 +18,13 @@
     "marked": "^4.2.3",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
-    "react-alert-confirm": "^4.1.5",
+    "react-alert-confirm": "^4.1.6",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^2.2.0",
     "babel-plugin-prismjs": "^2.1.0",
+    "prettier": "^2.8.1",
     "sass": "^1.56.1",
     "vite": "^3.2.4"
   }

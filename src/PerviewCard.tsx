@@ -35,9 +35,9 @@ const PerviewCard: React.FC<Props> = ({ title, desc, loadRaw, children }) => {
       <div className="desc">{desc}</div>
       <div className="children">{children}</div>
       <div className="handle">
-        <span onClick={() => setVisible(!visible)}>
+        <button onClick={() => setVisible(!visible)}>
           {visible ? 'Hide' : 'Show'} code
-        </span>
+        </button>
       </div>
       <div className="code" style={{ display: visible ? 'block' : 'none' }}>
         <pre>

@@ -47,7 +47,12 @@ export default ChangeLang;
 ChangeLang.title = 'Change language';
 ChangeLang.desc = (
   <span>
-    Change language, use <a href="#global-config"><code>AlertConfirm.config(...)</code></a> to set the global configuration, can also use <code>okText/cancelText</code> to customize button text.
+    Change language, use
+    <a href="#global-config">
+      <code>AlertConfirm.config(...)</code>
+    </a>
+    to set the global configuration, can also use <code>okText/cancelText</code>{' '}
+    to customize button text.
   </span>
 );
 // demo-ignore-end

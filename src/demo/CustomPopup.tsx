@@ -18,9 +18,7 @@ const CustomPopup = () => {
 
   return (
     <div>
-      <Button onClick={open}>
-        Custom Popup
-      </Button>
+      <Button onClick={open}>Custom Popup</Button>
     </div>
   );
 };

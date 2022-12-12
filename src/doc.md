@@ -66,7 +66,7 @@ AlertConfirm({
   footer(dispatch) {
     return (
       <>
-        <span className="pointer" onClick={() => dispatch('cancel')}>
+        <span onClick={() => dispatch('cancel')}>
           Cancel
         </span>
         <Button onClick={() => dispatch('delete')} styleType="danger">

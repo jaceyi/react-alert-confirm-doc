@@ -22,7 +22,8 @@ export default Confirm;
 Confirm.title = 'Confirm';
 Confirm.desc = (
   <span>
-    Use <code>AlertConfirm()</code> to show a confirmation modal dialog, can used <code>async/await</code> to synchronous mode call.
+    Use <code>AlertConfirm()</code> to show a confirmation modal dialog, can
+    used <code>async/await</code> to synchronous mode call.
   </span>
 );
 // demo-ignore-end
