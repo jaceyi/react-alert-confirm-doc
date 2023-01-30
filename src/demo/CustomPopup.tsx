@@ -4,6 +4,7 @@ import AlertConfirm, { Button } from 'react-alert-confirm';
 const CustomPopup = () => {
   const open = async () => {
     const [action] = await AlertConfirm({
+      maskClosable: true,
       custom: dispatch => (
         <div className="custom-popup">
           <div>Custom popup</div>

@@ -15,8 +15,6 @@ import AlertConfirm from 'react-alert-confirm';
 
 ## Imperative API
 
-函数调用传参 API
-
 | Property      | Description                                                                         | Type                         | Default               |
 | ------------- | ----------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
 | type          | AlertConfirm type                                                                   | `'confirm'` &#124; `'alert'` | `'confirm'`           |
@@ -35,12 +33,12 @@ import AlertConfirm from 'react-alert-confirm';
 | cancelText    | Text of the Cancel button                                                           | `ReactNode`                  | `'Cancel'`            |
 | onOk          | Specify a function that will be called when a user clicks mask or Cancel button     | `function(e)`                | -                     |
 | onCancel      | Specify a function that will be called when a user clicks the OK button             | `function(e)`                | -                     |
-| closeBefore   | Specify a function that will be called when dispatch action [Usage](#custom-footer) | [CloseBefore Type](#types)   | -                     |
+| closeBefore   | Specify a function that will be called when dispatch action [Custom Footer](#custom-footer) | [CloseBefore Type](#types)   | -                     |
 | closeAfter    | Specify a function that will be called when modal is closed completely              | `function(e)`                | -                     |
 
 ## Render JSX Props
 
-Includes [Imperative Options](#imperative-api)
+Includes [Imperative API](#imperative-api)
 
 当组件使用时传参比 [Imperative API](#imperative-api) 多了下面几个选项
 

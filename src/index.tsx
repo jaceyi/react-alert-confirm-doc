@@ -4,6 +4,7 @@ import './style.scss';
 import React, { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom/client';
 import { marked } from 'marked';
+import AlertConfirm from 'react-alert-confirm';
 import PerviewCard from './PerviewCard';
 import Basic from './demo/Basic';
 import Confirm from './demo/Confirm';
@@ -13,13 +14,22 @@ import ChangeLang from './demo/ChangeLang';
 import CustomPopup from './demo/CustomPopup';
 import Prism from 'prismjs';
 
+(window as any).AlertConfirm = AlertConfirm;
+
 const App = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const docRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     (async () => {
-      const md = await import('./doc.md?raw');
-      if (ref.current) {
-        ref.current.innerHTML = marked.parse(md.default);
+      const headerMd = await import('./title.md?raw');
+      if (headerRef.current) {
+        headerRef.current.innerHTML = marked.parse(headerMd.default);
+      }
+    })();
+    (async () => {
+      const docMd = await import('./doc.md?raw');
+      if (docRef.current) {
+        docRef.current.innerHTML = marked.parse(docMd.default);
         Prism.highlightAll();
       }
     })();
@@ -27,48 +37,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <div className="header">
-        <h1 className="name">React-Alert-Confirm</h1>
-        <div className="icon">
-          <a href="https://npmjs.org/package/react-alert-confirm" title="npm">
-            <img
-              src="https://badgen.net/npm/v/react-alert-confirm?style=flat-square"
-              alt="npm"
-            />
-          </a>
-          <a
-            href="https://npmjs.org/package/react-alert-confirm"
-            title="npm download"
-          >
-            <img
-              src="https://badgen.net/npm/dm/react-alert-confirm?style=flat-square"
-              alt="npm download"
-            />
-          </a>
-          <a
-            href="https://bundlephobia.com/result?p=react-alert-confirm"
-            title="bundle size"
-          >
-            <img
-              src="https://badgen.net/bundlephobia/minzip/react-alert-confirm?style=flat-square"
-              alt="bundle size"
-            />
-          </a>
-          <a
-            href="https://github.com/jaceyi/react-alert-confirm"
-            title="github react-alert-confirm"
-          >
-            <img
-              src="https://badgen.net/badge/icon/react-alert-confirm?icon=github&label=Github&style=flat-square"
-              alt="github react-alert-confirm"
-            />
-          </a>
-        </div>
-        <blockquote className="blockquote">
-          A react component confirm dialog, support synchronous mode call（一个
-          React 确认对话框组件，支持同步方式调用）
-        </blockquote>
-      </div>
+      <div className="header" ref={headerRef}></div>
       <h2 id="example">Example</h2>
       <div className="wrap">
         <div className="col">
@@ -118,9 +87,12 @@ const App = () => {
           </PerviewCard>
         </div>
       </div>
-      <div className="docs" ref={ref} />
+      <div className="docs" ref={docRef} />
       <div className="footer">
-        Github：<a href="https://github.com/jaceyi/react-alert-confirm-doc">react-alert-confirm-doc</a>
+        Doc Github：
+        <a href="https://github.com/jaceyi/react-alert-confirm-doc">
+          react-alert-confirm-doc
+        </a>
       </div>
     </div>
   );
