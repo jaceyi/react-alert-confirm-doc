@@ -2,15 +2,29 @@ import React from 'react';
 import AlertConfirm, { Button } from 'react-alert-confirm';
 
 const Confirm = () => {
-  const openConfirm = async () => {
-    const [action] = await AlertConfirm('This is the confirmation popup !');
+  const openBasic = async () => {
+    const [action] = await AlertConfirm('This is a normal string.');
+    action && console.log('ok');
+  };
+  const openComplex = async () => {
+    const [action] = await AlertConfirm({
+      title: 'Are you sure?',
+      desc: 'This action cannot be undone.',
+      okText: "Yes, I'm sure",
+      cancelText: 'No'
+    });
     action && console.log('ok');
   };
 
   return (
     <div>
-      <Button styleType="primary" onClick={openConfirm}>
-        Confirm
+      <Button onClick={openBasic}>Basic Confirm</Button>
+      <Button
+        styleType="primary"
+        onClick={openComplex}
+        style={{ marginLeft: 10 }}
+      >
+        Complex Confirm
       </Button>
     </div>
   );

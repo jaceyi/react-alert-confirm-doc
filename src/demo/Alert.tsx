@@ -3,7 +3,7 @@ import AlertConfirm, { Button } from 'react-alert-confirm';
 
 const Alert = () => {
   const openAlert = () => {
-    AlertConfirm.alert(<span>这是 Alert ，支持 ReactNode </span>);
+    AlertConfirm.alert(<span>Supports passing in a ReactNode</span>);
   };
 
   return (

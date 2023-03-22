@@ -23,7 +23,7 @@ const ChangeLang = () => {
   };
 
   const openConfirm = async () => {
-    const [action] = await AlertConfirm('This is the confirmation popup !');
+    const [action] = await AlertConfirm('This is the confirmation popup!');
     action && console.log('ok');
   };
 

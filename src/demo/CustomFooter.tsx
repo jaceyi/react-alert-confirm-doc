@@ -4,8 +4,8 @@ import AlertConfirm, { Button } from 'react-alert-confirm';
 const CustomFooter = () => {
   const open = async () => {
     const [action, instance] = await AlertConfirm({
-      title: 'Confirm',
-      desc: 'This action will delete the product!',
+      title: 'Custom',
+      desc: <span>Supports passing in a ReactNode</span>,
       footer: dispatch => {
         return (
           <>
