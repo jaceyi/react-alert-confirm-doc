@@ -19,7 +19,7 @@ const CustomPopup = () => {
 
   return (
     <div>
-      <Button onClick={open}>Custom Popup</Button>
+      <AlertConfirm.Button onClick={open}>Custom Popup</AlertConfirm.Button>
     </div>
   );
 };

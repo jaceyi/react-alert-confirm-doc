@@ -126,6 +126,14 @@ The Button also contains all attributes of the `ButtonHTMLAttributes`
 | --------- | ----------------- | ------------------------------------------------ | ----------- |
 | styleType | Button style type | `'default'` &#124; `'primary'` &#124; `'danger'` | `'default'` |
 
+```typescript jsx
+import AlertConfirm, { Button } from 'react-alert-confirm';
+
+<Button styleType="primary">Text</Button>
+// or
+<AlertConfirm.Button styleType="danger">Text</AlertConfirm.Button>
+```
+
 ## Types
 
 ```typescript
